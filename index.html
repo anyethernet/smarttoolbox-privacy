@@ -47,7 +47,7 @@
   <li>소음 측정용 마이크 신호. 녹음 파일을 만들지 않고, 소리 크기만 계산합니다.</li>
   <li>화면 밝기. 이 앱 화면의 밝기만 바꾸며, 화면을 나가면 되돌립니다.</li>
   <li>손전등 LED의 켜짐·꺼짐</li>
-  <li>홈에 어떤 도구를 보일지 고른 설정. 이 설정만 기기에 저장됩니다.</li>
+  <li>홈에 어떤 도구를 보일지 고른 설정과, 구독 중인지 표시하는 값. 이 값만 기기에 저장됩니다.</li>
 </ul>
 
 <h2>3. 기기를 벗어날 수 있는 경우</h2>
@@ -69,7 +69,13 @@
     <td>배너 광고</td>
     <td>광고 ID, 기기 정보, IP 주소</td>
     <td>Google AdMob</td>
-    <td>앱을 사용하는 동안</td>
+    <td>구독하지 않은 동안</td>
+  </tr>
+  <tr>
+    <td>구독</td>
+    <td>구독 상품과 결제. 카드 정보는 이 앱이 받지 않습니다.</td>
+    <td>Google Play</td>
+    <td>구독을 시작하거나 복원할 때</td>
   </tr>
 </table>
 <p>개발자 서버로는 나가지 않습니다. 앱은 음성을 녹음해 두지 않고, IP 조회 결과도 서버에 남기지 않습니다.</p>
@@ -80,21 +86,22 @@
   <li>카메라: QR·바코드를 읽을 때만 사용합니다. 손전등은 카메라 권한 없이 플래시 LED만 켭니다.</li>
   <li>마이크: 소음 측정 또는 손전등 음성 제어를 이용자가 시작했을 때만 사용합니다.</li>
   <li>위치, 근처 Wi-Fi: 연결된 Wi-Fi 이름을 읽기 위해 필요할 수 있습니다. 위치 추적용이 아닙니다.</li>
-  <li>인터넷, Wi-Fi 상태, 네트워크 상태: 연결 정보, 외부 IP 확인, 배너 광고에 사용합니다.</li>
+  <li>인터넷, Wi-Fi 상태, 네트워크 상태: 연결 정보, 외부 IP 확인, 배너 광고, 구독 확인에 사용합니다.</li>
   <li>광고 ID: 배너 광고 표시에 사용됩니다. 안드로이드 설정에서 광고 ID를 삭제하거나 끌 수 있습니다.</li>
 </ul>
 <p>권한은 해당 도구를 쓸 때 안내한 뒤 요청합니다. 거부해도 그 도구만 제한되고 나머지 도구는 사용할 수 있습니다.</p>
 
 <h2>5. 제3자 제공과 처리 위탁</h2>
-<p>개인정보를 판매하지 않습니다. 배너 광고 표시는 Google AdMob에 맡기며, 그 밖의 개인정보는 제3자에게 제공하거나 처리 위탁하지 않습니다. 위 표의 기능은 이용자의 기기에서 해당 서비스로 직접 연결됩니다.</p>
+<p>개인정보를 판매하지 않습니다. 배너 광고 표시는 Google AdMob에, 구독 결제는 Google Play에 맡깁니다. 그 밖의 개인정보는 제3자에게 제공하거나 처리 위탁하지 않습니다. 위 표의 기능은 이용자의 기기에서 해당 서비스로 직접 연결됩니다.</p>
 <ul>
   <li>ipify 개인정보 안내: <a href="https://www.ipify.org/">https://www.ipify.org/</a></li>
   <li>기기 음성 인식은 제조사 또는 Google 음성 인식 정책을 따릅니다.</li>
   <li>Google 개인정보 처리방침: <a href="https://policies.google.com/privacy">https://policies.google.com/privacy</a></li>
+  <li>구독 결제와 해지는 Google Play에서 처리됩니다. <a href="https://support.google.com/googleplay/answer/7018481">결제 수단 안내</a></li>
 </ul>
 
 <h2>6. 보유와 파기</h2>
-<p>개발자는 이용자 개인정보를 서버에 보유하지 않습니다. 기기에 남은 메뉴 표시 설정은 앱을 삭제하면 함께 지워집니다. 이용자는 기기 설정에서 권한을 언제든 끌 수 있습니다.</p>
+<p>개발자는 이용자 개인정보를 서버에 보유하지 않습니다. 기기에 남은 메뉴 표시 설정과 구독 표시 값은 앱을 삭제하면 함께 지워집니다. Play 구독 자체는 Google 계정에 남으며, Play 구독 관리에서 해지할 수 있습니다. 이용자는 기기 설정에서 권한을 언제든 끌 수 있습니다.</p>
 
 <h2>7. 이용자의 권리</h2>
 <p>열람, 정정, 삭제, 처리 정지를 요청하려면 아래 연락처로 알려 주십시오. 서버에 보관 중인 개인정보가 없으므로, 기기 안의 정보는 앱 삭제와 권한 해제로 이용자가 직접 처리할 수 있습니다.</p>
@@ -126,7 +133,7 @@
 <p>Smart Toolbox is a set of on-device utilities: flashlight, level, angle, compass, Wi-Fi details, IP lookup, QR and barcode, noise level, screen brightness, battery, electrical calculator, and sensors. There is no account and no developer server that stores personal data.</p>
 
 <p><strong>Not collected by the developer:</strong> name, phone number, address, contacts, photo library, or payment data. There is no account and no analytics SDK. The developer does not store the advertising ID.</p>
-<p>A Google AdMob banner is shown at the bottom of the screen. Google may process the advertising ID, device information, and IP address to show that ad. Sensor readings, calculator inputs, QR contents, and voice are not sent to the ad network.</p>
+<p>A Google AdMob banner is shown at the bottom of the screen unless you subscribe. Google may process the advertising ID, device information, and IP address to show that ad. Sensor readings, calculator inputs, QR contents, and voice are not sent to the ad network. A monthly or yearly subscription removes the banner. Google Play processes the payment. This app does not receive card details. The on-device subscription flag is deleted when you uninstall, but the Play subscription stays on the Google account until you cancel it in Play.</p>
 
 <p><strong>Stays on the phone:</strong> sensor values, battery details, level and compass readings, calculator inputs, the camera preview used to scan a code, noise levels, screen brightness, the flashlight state, and which tools you choose to show. Scan images and microphone audio for the noise tool are not saved. The noise tool only measures loudness.</p>
 
@@ -141,7 +148,7 @@
 
 <p><strong>Permissions:</strong> camera for QR and barcode scanning, microphone for the noise tool and flashlight voice control, location or nearby Wi-Fi only to read the connected network name, and internet for the public IP lookup and the banner ad. Each permission is requested when you open that tool.</p>
 
-<p>The developer does not sell personal data. Showing the banner is handled by Google AdMob (<a href="https://policies.google.com/privacy">privacy policy</a>). Uninstalling the app deletes the on-device menu setting. You can turn permissions off in Android settings at any time.</p>
+<p>The developer does not sell personal data. Showing the banner is handled by Google AdMob, and subscription billing is handled by Google Play (<a href="https://policies.google.com/privacy">privacy policy</a>). Uninstalling the app deletes the on-device menu setting and subscription flag. You can turn permissions off in Android settings at any time.</p>
 
 <p>The app is not directed at children under 14.</p>
 
