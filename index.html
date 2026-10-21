@@ -26,6 +26,7 @@
   <p>서비스 대표명: 스마트 도구상자</p>
   <p>패키지 이름: com.smarttoolbox.smart_toolbox</p>
   <p>개인정보 처리 책임자(대표): anyethernet</p>
+  <p>보안 책임자: Kim JU DONG</p>
   <p>연락처: <a href="mailto:xwebmon@gmail.com">xwebmon@gmail.com</a></p>
   <p>시행일: 2026년 10월 21일</p>
 </div>
@@ -63,7 +64,7 @@
     <td>손전등 음성 제어</td>
     <td>말한 음성</td>
     <td>기기의 음성 인식 서비스(예: Google)</td>
-    <td>이용자가 음성 듣기를 켜 둔 동안</td>
+    <td>앱이 화면에 떠 있고 마이크를 허용한 동안. 앱을 벗어나면 듣기를 멈춥니다.</td>
   </tr>
   <tr>
     <td>배너 광고</td>
@@ -84,12 +85,12 @@
 <h2>4. 권한</h2>
 <ul>
   <li>카메라: QR·바코드를 읽을 때만 사용합니다. 손전등은 카메라 권한 없이 플래시 LED만 켭니다.</li>
-  <li>마이크: 소음 측정 또는 손전등 음성 제어를 이용자가 시작했을 때만 사용합니다.</li>
+  <li>마이크: 앱이 화면에 떠 있는 동안 손전등 음성 명령(“켜 줘”, “꺼 줘”)을 듣습니다. 소음 측정은 측정을 시작했을 때만 사용합니다. 녹음 파일은 만들지 않으며, 앱을 벗어나면 음성 듣기를 멈춥니다.</li>
   <li>위치, 근처 Wi-Fi: 연결된 Wi-Fi 이름을 읽기 위해 필요할 수 있습니다. 위치 추적용이 아닙니다.</li>
   <li>인터넷, Wi-Fi 상태, 네트워크 상태: 연결 정보, 외부 IP 확인, 배너 광고, 구독 확인에 사용합니다.</li>
   <li>광고 ID: 배너 광고 표시에 사용됩니다. 안드로이드 설정에서 광고 ID를 삭제하거나 끌 수 있습니다.</li>
 </ul>
-<p>권한은 해당 도구를 쓸 때 안내한 뒤 요청합니다. 거부해도 그 도구만 제한되고 나머지 도구는 사용할 수 있습니다.</p>
+<p>손전등 마이크 권한은 앱을 열 때 안내한 뒤 요청합니다. 그 밖에는 해당 도구를 쓸 때 안내한 뒤 요청합니다. 거부해도 그 도구만 제한되고 나머지 도구는 사용할 수 있습니다. 음성 듣기를 거부해도 손전등 버튼은 사용할 수 있습니다.</p>
 
 <h2>5. 제3자 제공과 처리 위탁</h2>
 <p>개인정보를 판매하지 않습니다. 배너 광고 표시는 Google AdMob에, 구독 결제는 Google Play에 맡깁니다. 그 밖의 개인정보는 제3자에게 제공하거나 처리 위탁하지 않습니다. 위 표의 기능은 이용자의 기기에서 해당 서비스로 직접 연결됩니다.</p>
@@ -116,6 +117,7 @@
 <ul>
   <li>서비스 대표명: 스마트 도구상자</li>
   <li>대표(개인정보 처리 책임자): anyethernet</li>
+  <li>보안 책임자: Kim JU DONG</li>
   <li>연락처: <a href="mailto:xwebmon@gmail.com">xwebmon@gmail.com</a></li>
 </ul>
 
@@ -126,6 +128,7 @@
   <p>Service name: 스마트 도구상자 (Smart Toolbox)</p>
   <p>Package: com.smarttoolbox.smart_toolbox</p>
   <p>Representative and privacy contact: anyethernet</p>
+  <p>Security officer: Kim JU DONG</p>
   <p>Email: <a href="mailto:xwebmon@gmail.com">xwebmon@gmail.com</a></p>
   <p>Effective: October 21, 2026</p>
 </div>
@@ -140,18 +143,18 @@
 <p><strong>May leave the phone only when you use these features:</strong></p>
 <ul>
   <li>Public IP lookup sends your IP address to api.ipify.org when you tap the button. The result is shown on screen and is not stored by the developer.</li>
-  <li>Flashlight voice control sends what you say to the phone’s speech service (for example Google) while listening is on. The app does not record or store the audio.</li>
+  <li>Flashlight voice control sends what you say to the phone’s speech service (for example Google) while the app is on screen and the microphone is allowed. Listening stops when you leave the app. The app does not record or store the audio.</li>
   <li>The banner ad lets Google AdMob process the advertising ID, device information, and IP address while the app is open. You can reset or turn off the advertising ID in Android settings.</li>
 </ul>
 
 <p>Wi-Fi name, BSSID, signal, and local IP are shown on screen only. Android may require location or nearby-Wi-Fi permission to reveal the network name. The app does not track or upload your location.</p>
 
-<p><strong>Permissions:</strong> camera for QR and barcode scanning, microphone for the noise tool and flashlight voice control, location or nearby Wi-Fi only to read the connected network name, and internet for the public IP lookup and the banner ad. Each permission is requested when you open that tool.</p>
+<p><strong>Permissions:</strong> camera for QR and barcode scanning, microphone to hear flashlight commands (“on” and “off” in Korean) while the app is on screen and for the noise tool when you start a measurement, location or nearby Wi-Fi only to read the connected network name, and internet for the public IP lookup and the banner ad. The flashlight microphone prompt appears when the app opens. Other permissions are requested when you open that tool. The flashlight button still works if you decline voice control.</p>
 
 <p>The developer does not sell personal data. Showing the banner is handled by Google AdMob, and subscription billing is handled by Google Play (<a href="https://policies.google.com/privacy">privacy policy</a>). Uninstalling the app deletes the on-device menu setting and subscription flag. You can turn permissions off in Android settings at any time.</p>
 
 <p>The app is not directed at children under 14.</p>
 
-<p><strong>Contact:</strong> anyethernet, <a href="mailto:xwebmon@gmail.com">xwebmon@gmail.com</a></p>
+<p><strong>Contact:</strong> anyethernet, <a href="mailto:xwebmon@gmail.com">xwebmon@gmail.com</a>. Security officer: Kim JU DONG.</p>
 </body>
 </html>
